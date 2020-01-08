@@ -1,0 +1,26 @@
+<!--/****************************************************************************
+  * ADOBE CONFIDENTIAL
+  * __________________
+  *
+  * Copyright 2016 Adobe Systems Incorporated
+  * All Rights Reserved.
+  *
+  * NOTICE:  All information contained herein is, and remains
+  * the property of Adobe Systems Incorporated and its suppliers,
+  * if any.  The intellectual and technical concepts contained
+  * herein are proprietary to Adobe Systems Incorporated and its
+  * suppliers and are protected by trade secret or copyright law.
+  * Dissemination of this information or reproduction of this material
+  * is strictly forbidden unless prior written permission is obtained
+  * from Adobe Systems Incorporated.
+  ************************************************************************** */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-use.data="htmlcontentreference.js" data-sly-unwrap>   
+    <div data-sly-test.show="${data.defaultContent && properties.fragmentPath}" data-experience-rendered="default" class="cmp-htmlcontentfragment__default">
+        ${data.defaultContent @ context='html'} 
+	</div>
+<!--/*
+    <sly data-sly-test=${data.fragmentPath}
+         data-sly-resource="${@path=data.fragmentPath, selectors='content', wcmmode='disabled'}"></sly>
+*/-->         
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !show, classAppend = 'cmp-htmlcontentfragment'}"></sly>
