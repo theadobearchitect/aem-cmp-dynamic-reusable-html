@@ -4,9 +4,9 @@
     <jcr:content
         cq:lastModified="{Date}2019-03-04T09:29:02.786+05:30"
         cq:lastModifiedBy="admin"
-        cq:templateType="/conf/dynamic-reusable-html-component/settings/wcm/template-types/empty-experience-fragment"
+        cq:templateType="/conf/mcafee-consumer-wcm-core/settings/wcm/template-types/empty-experience-fragment"
         jcr:primaryType="cq:PageContent"
-        jcr:title="HTML (external) Content Section"
-        allowedPaths="[/content/experience-fragments/(.*)/html(/.*)?]"
+        jcr:title="HTML (Reusable) Content Section"
+        allowedPaths="[/content/experience-fragments/consumer/(.*)/html(/.*)?]"
         status="enabled"/>
 </jcr:root>

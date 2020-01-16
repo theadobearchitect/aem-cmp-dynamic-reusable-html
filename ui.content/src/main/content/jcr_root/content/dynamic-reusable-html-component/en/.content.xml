@@ -88,5 +88,7 @@
                     sling:resourceType="dynamic-reusable-html-component/components/content/sharing"/>
             </responsivegrid>
         </root>
+        <image/>
     </jcr:content>
+    <refer-this-page-/>
 </jcr:root>

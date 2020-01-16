@@ -14,10 +14,15 @@
                 sling:resourceType="granite/ui/components/coral/foundation/tabs">
                 <items jcr:primaryType="nt:unstructured">
                     <column
+                        granite:class="granite-value-container"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="HTML Component Path"
-                        sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        class="granite-value-container">
+                        <items
+                            granite:class="granite-value-items"
+                            jcr:primaryType="nt:unstructured"
+                            class="granite-value-items">
                             <fragmentpath
                                 granite:class="coral-fragmentPath"
                                 granite:id="xfPicker"
@@ -29,19 +34,39 @@
                                 name="./fragmentPath"
                                 propertyFilter="cq:xfShowInEditor"
                                 variant="web"/>
+                            <value
+                                granite:class="granite-value-html"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                class="granite-value-html"
+                                disabled="{Boolean}true"
+                                fieldLabel="Value"
+                                readonly="true"
+                                required="{Boolean}false"/>
                         </items>
                     </column>
                     <context
-                        granite:class="granite-configuration-container"
+                        granite:class="granite-context-container"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Context (Override)"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        class="granite-context-container">
+                        <items
+                            granite:class="granite-context-items"
+                            jcr:primaryType="nt:unstructured"
+                            class="granite-context-items"/>
+                    </context>
+                    <config
+                        granite:class="granite-configuration-container"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Configuration (Override)"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         class="granite-configuration-container">
                         <items
                             granite:class="granite-configuration-items"
                             jcr:primaryType="nt:unstructured"
                             class="granite-configuration-items"/>
-                    </context>
+                    </config>
                 </items>
             </tabs>
         </items>

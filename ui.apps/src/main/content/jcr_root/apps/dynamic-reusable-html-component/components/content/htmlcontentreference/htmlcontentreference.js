@@ -91,6 +91,19 @@ use(function () {
                     defaultContent = defaultContent.replaceAll(PATTERN.quote( "${" + propName + "}" ),valueToReplace);
                 }
             }
+            //config
+            var configDataPath = variationPath + '/jcr:content' + '/root/config';
+            var configDataRes  = resolver.getResource(configDataPath);
+            if (configDataRes != null) {
+                var configDataResChildren = configDataRes.getChildren();
+                for (var idx in configDataResChildren) {
+                    var res = configDataResChildren[idx];
+                    var props = res.adaptTo(Packages.org.apache.sling.api.resource.ValueMap);
+                    var propName = props.get("config_key");
+                    var valueToReplace = properties.get(propName,props.get("config_value"));
+                    defaultContent = defaultContent.replaceAll(PATTERN.quote( "${" + propName + "}" ),valueToReplace);
+                }
+            }
         }
     }
     return {

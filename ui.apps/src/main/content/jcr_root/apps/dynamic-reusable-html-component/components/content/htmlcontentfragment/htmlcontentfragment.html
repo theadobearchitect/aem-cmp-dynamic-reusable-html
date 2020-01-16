@@ -1,7 +1,8 @@
 <div data-instance="${wcmmode.edit ? 'none' : 'vue'}" class="cmp-htmlcontentfragment" 
-     data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.dynamicContent="com.mcafee.consumer.wcm.core.components.HtmlContentfragment">
 	<div data-experience-rendered="default" class="cmp-htmlcontentfragment__default">
-        ${properties.defaultContent @ context='html'} 
+        ${dynamicContent.defaultContent @ context='html'} 
 	</div>
 </div>
 <sly data-sly-call="${templates.placeholder @ isEmpty = !properties.defaultContent, classAppend = 'cmp-htmlcontentfragment'}"></sly>
